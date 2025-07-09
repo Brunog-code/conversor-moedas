@@ -26,8 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Acesse o projeto clicando no link abaixo:
 
-[🌐 **Conversor de Moedas**](https://seu-usuario.github.io/conversor-moedas/)  
-> 🔁 *Altere o link acima para o da sua conta após publicar o repositório.*
+[🌐 **Conversor de Moedas**](https://brunog-code.github.io/conversor-moedas/)  
 
 ---
 
