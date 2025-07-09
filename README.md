@@ -34,7 +34,7 @@ Acesse o projeto clicando no link abaixo:
 
 Aqui está uma prévia de como o conversor se apresenta:
 
-![Screenshot do Conversor](img/conversor-preview.png)  
+![Screenshot do Conversor](img/conversor-preview.PNG)  
 
 ---
 
