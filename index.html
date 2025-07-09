@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor moedas</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+     <!-- toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Flag Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-success mb-4 shadow">
+        <div class="container d-flex justify-content-center">
+            <div class="navbar-brand text-white">
+                <h3><i class="fas fa-dollar-sign me-3"></i>Conversor moedas</h3>
+            </div>
+        </div>
+    </nav>
+    <section class="container content-padding">
+        <div class="border p-3 rounded-3 bg-light shadow">
+            <h3 class="mb-3 text-success">Selecione os campos abaixo</h3>
+            <div class="row mb-3">
+                <div class="col-md-3">
+                    <label class="form-label text-success fw-semibold" for="">Data da cotação</label>
+                    <input id="inp-date" class="form-control" type="date" id="data-cotacao">
+                </div>
+            </div>
+            <div class="row g-2">
+                <div class="col-md-3 mb-2">
+                    <label class="form-label text-success fw-semibold" for="">Valor</label>
+                    <input id="inp-value" class="form-control" type="text" placeholder="0,00">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label class="form-label text-success fw-semibold" for="moeda-origem">De</label>
+                    <select id="currency-from" class="form-control" name="moeda-origem" id="moeda-origem">
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label class="form-label text-success fw-semibold" for="moeda-destino">Para</label>
+                    <select id="currency-to" class="form-control" name="moeda-destino" id="moeda-destino">
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="USD">Dólar (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="JPY">Iene Japonês (JPY)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="CHF">Franco Suíço (CHF)</option>
+                        <option value="AUD">Dólar Australiano (AUD)</option>
+                        <option value="CAD">Dólar Canadense (CAD)</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label invisible">.</label>
+                    <button id="convert-btn" class="btn btn-success text-white w-100"><i class="fas fa-exchange-alt me-2"></i>Converter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- resultado -->
+        <div id="row-result-header" class="row d-none">
+            <h3 class="mt-5 text-success">Resultado</h3>
+        </div>
+        <div id="row-result-body" class="row d-none shadow mb-2"> 
+            <div class="col">
+                <div class="card mb-5" style="width: 100%;">
+                    <div class="card-body  bg-success-subtle d-flex justify-content-center justify-content-around card-body-personalize">
+                        <div class="p-2 rounded-3">
+                            <div class="d-flex justify-content-center align-items-center flex-column">
+                                <h5 id="date-result" class="card-title fs-5 mb-3"></h5>
+                                <p id="value-result" class="display-5 me-2 fw-bold"></p>
+                            </div>
+                            <div class="d-flex justify-content-around w-100">
+                                <p class="me-4 fw-semibold">Valor: <span id="value-inp-result" class="fw-normal"></span> </p>
+                                <p class="me-4 fw-semibold">De: <span id="from-result" class="fw-normal"></span></p>
+                                <p class="fw-semibold">Para:  <span id="to-result" class="fw-normal"></span></p>
+                            </div>
+                        </div>
+                        <div class="p-2 bg-light rounded-3">
+                            <h5 class="card-title fs-5 mb-3 text-success">Cotação do dia</h5>
+                            <div class="d-flex flex-column gap-2">
+                                <p id="exchange-from"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script toast -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>   
+
+    <!-- script Boostratp -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- script -->
+     <script src="script/script.js"></script>
+</body>
+</html>
